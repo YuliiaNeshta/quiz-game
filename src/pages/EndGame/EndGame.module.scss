@@ -1,0 +1,32 @@
+@import "../../color";
+
+.wrapper{
+  height: 100vh;
+  background-color: $fill02;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+}
+
+.result{
+  max-width: 39rem;
+  width: 100%;
+}
+
+.totalText{
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 116%;
+  color: $text-color;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+.score{
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 116%;
+  color: $text-color;
+  margin-bottom: 4rem;
+}
