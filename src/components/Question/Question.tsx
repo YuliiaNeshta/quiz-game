@@ -32,14 +32,6 @@ const Question: FC<QuestionProps> = ({ data, questionIdx, selectedAnswer, onClic
                           <span className={styles.letter}>{LETTERS[idx]}</span>
                           {answer}
                         </ButtonAnswer>
-                        // <button
-                        //   key={answer}
-                        //   // @ts-ignore
-                        //   onClick={() => onClick(answer, quiz.correct_answer)}
-                        // >
-                        //   <span className={styles.letter}>{LETTERS[idx]}</span>
-                        //   {answer}
-                        // </button>
                       );
                     })}
                 </div>

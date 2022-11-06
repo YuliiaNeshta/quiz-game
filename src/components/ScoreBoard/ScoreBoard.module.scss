@@ -1,6 +1,5 @@
-@import '../../color';
-
-
+@import '../../style/color';
+@import '../../style/breakpoints';
 
 .scores {
   background-color: #ffffff;
@@ -12,6 +11,24 @@
   justify-content: center;
   align-items: center;
   row-gap: 0.5rem;
+  transition: transform 0.4s ease;
+  @media screen and (max-width: $tablet){
+    position: fixed;
+    inset: 0;
+    max-width: none;
+    background-color: $fill02;
+    transform: translateY(-100%);
+  }
+  &.show{
+    @media screen and (max-width: $tablet) {
+      transform: translateY(0);
+    }
+  }
+  &.hide{
+    @media screen and (max-width: $tablet) {
+      transform: translateY(-100%);
+    }
+  }
 }
 
 .score {

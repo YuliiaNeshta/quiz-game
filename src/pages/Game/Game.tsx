@@ -1,4 +1,6 @@
+import cn from 'classnames';
 import React, { FC, useEffect, useState } from 'react';
+import { Burger, Close } from '../../components/Icons';
 import Question from '../../components/Question';
 import ScoreBoard from '../../components/ScoreBoard';
 import { DELAY } from '../../constants';
@@ -14,6 +16,8 @@ const Game: FC = () => {
   const [score, setScore] = useState<string>('0');
   const [className, setClassName] = useState<string>('');
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
+
+  const [showScoreMobile, setShowScoreMobile] = useState<boolean>(false);
 
   const { money, quiz } = data;
 
@@ -68,7 +72,17 @@ const Game: FC = () => {
             questionIdx={questionIdx}
             selectedAnswer={selectedAnswer}
           />
-          <ScoreBoard data={money} questionIdx={questionIdx} indexCurrentScore={indexCurrentScore} />
+          {showScoreMobile ? (
+            <Close className={styles.close} onClick={() => setShowScoreMobile(false)} />
+          ) : (
+            <Burger className={styles.burger} onClick={() => setShowScoreMobile(true)} />
+          )}
+          <ScoreBoard
+            className={cn(showScoreMobile ? 'show' : 'hide')}
+            data={money}
+            questionIdx={questionIdx}
+            indexCurrentScore={indexCurrentScore}
+          />
         </div>
       ) : (
         <EndGame score={score} onClick={() => handleTryAgainButton()} />
