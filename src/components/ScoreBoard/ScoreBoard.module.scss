@@ -1,0 +1,27 @@
+@import '../../color';
+
+
+
+.scores {
+  background-color: #ffffff;
+  max-width: 23.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.score {
+  border: 1px solid $accent02;
+  &.active {
+    border-color: $accent02 !important;
+    color: $accent02 !important;
+  }
+  &.pastScore {
+    color: $fill;
+    border-color: $fill;
+  }
+}

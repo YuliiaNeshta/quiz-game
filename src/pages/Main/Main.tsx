@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import hand from '../../assests/icons/hand.svg';
+import hand from '../../assests/images/hand.svg';
 import Button from '../../components/Button';
 
 import styles from './Main.module.scss';
