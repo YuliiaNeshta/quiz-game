@@ -11,6 +11,15 @@
   flex: 1 1 auto;
 }
 
+.quizWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+//.quiz{
+//  height: 100%;
+//}
+
 .wrapper {
   display: flex;
   justify-content: center;

@@ -57,7 +57,7 @@ const Game: FC = () => {
                 return (
                   <div key={quiz.id} className={styles.quiz}>
                     {quiz.id === questionIdx + 1 && (
-                      <>
+                      <div className={styles.quizWrapper}>
                         <h2 className={styles.title}>{quiz.question}</h2>
                         <div className={styles.answers}>
                           {quiz.answers &&
@@ -74,7 +74,7 @@ const Game: FC = () => {
                               );
                             })}
                         </div>
-                      </>
+                      </div>
                     )}
                   </div>
                 );

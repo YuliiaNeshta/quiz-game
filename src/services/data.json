@@ -2,21 +2,69 @@
   "quiz": [
     {
       "id": 1,
-      "question": "How old your elder brother was 10 years before you was born, mate?",
-      "answers": ["10 years", "11 years", "12 years", "14 years"],
-      "correct_answer": "10 years"
+      "question": "What colour is the “m” from the McDonald’s logo?",
+      "answers": ["Blue", "Red", "Yellow", "Black"],
+      "correct_answer": "Yellow"
     },
     {
       "id": 2,
       "question": "Eighteen thousandths, written as a decimal, is:",
       "answers": ["0.0018", "0.018", "0.18"],
-      "correct_answer": "0.0018"
+      "correct_answer": "0.018"
     },
     {
       "id": 3,
       "question": "The next number in the sequence 1, 3, 6, 10 is:",
       "answers": ["12", "13", "14", "15"],
       "correct_answer": "15"
+    },
+    {
+      "id": 4,
+      "question": "What is the main ingredient in guacamole?",
+      "answers": ["Tomato", "Avocado", "Pepper", "Banana"],
+      "correct_answer": "Avocado"
+    },
+    {
+      "id": 5,
+      "question": "What is actually electricity?",
+      "answers": ["A flow of water", "A flow of air", "A flow of electrons", "A flow of atoms"],
+      "correct_answer": "A flow of electrons"
+    },
+    {
+      "id": 6,
+      "question": "“Onze” is the french number for?",
+      "answers": ["3", "1", "9", "11"],
+      "correct_answer": "11"
+    },
+    {
+      "id": 7,
+      "question": "Who was the 40th President of the United States?",
+      "answers": ["Franklin D. Roosevelt", "Ronald Reagan", "Bill Clinton", "George W. Bush"],
+      "correct_answer": "Ronald Reagan"
+    },
+    {
+      "id": 8,
+      "question": "How many sides has a Hexagon?",
+      "answers": ["5", "6", "7", "8"],
+      "correct_answer": "6"
+    },
+    {
+      "id": 9,
+      "question": "What does NASA stand for?",
+      "answers": ["National Aeronautics and Space Administration", "Nautical And Space Association", "National Aeronautics and Space Association", "New Aeronautics and Spacial Administration"],
+      "correct_answer": "National Aeronautics and Space Administration"
+    },
+    {
+      "id": 10,
+      "question": "Which Friends character’s famous pickup line is “How you doin’?",
+      "answers": ["Ross", "Joey", "Chandler", "Mike"],
+      "correct_answer": "Joey"
+    },
+    {
+      "id": 11,
+      "question": "How many bones are there in an adult human body?",
+      "answers": ["186", "206", "286", "306"],
+      "correct_answer": "206"
     }
   ],
   "money": [
