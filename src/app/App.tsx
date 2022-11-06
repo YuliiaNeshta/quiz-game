@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import Game from '../pages/Game';
 import Main from '../pages/Main';
 
 function App() {
-  return (
-    <>
-      <Main />
-      <Game />
-    </>
-  );
+  const [startGame, setStartGame] = useState<boolean>(false);
+
+  return <>{startGame ? <Game /> : <Main onClick={() => setStartGame(true)} />}</>;
 }
 
 export default App;
