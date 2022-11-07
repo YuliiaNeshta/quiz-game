@@ -1,4 +1,5 @@
 @import "../../style/color";
+@import "../../style/breakpoints";
 
 .button{
   height: 4rem;
@@ -15,16 +16,19 @@
   font-size: 1.25rem;
   line-height: 116%;
   border: none;
-  &.fill{
-    color: #FFFFFF;
-    background-color: $accent02;
-    transition: background-color 0.5s ease;
-    &:hover{
-      background-color: $accent03;
-    }
-    &:active, &:visited{
-      background-color: $accent;
-    }
+  color: #FFFFFF;
+  background-color: $accent02;
+  transition: background-color 0.5s ease;
+  @media screen and (max-width: $mobile){
+    height: 3rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+  &:hover{
+    background-color: $accent03;
+  }
+  &:active, &:visited{
+    background-color: $accent;
   }
 }
 

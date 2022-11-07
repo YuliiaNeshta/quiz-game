@@ -43,6 +43,7 @@ const Game: FC = () => {
     setQuestionIdx(0);
     setAnswers([]);
     setClassNameForActiveAnswer('');
+    setScore('0');
   };
 
   const handleClick = (answer: string, correctAnswer: string) => {
