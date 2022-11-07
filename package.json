@@ -2,6 +2,7 @@
   "name": "quiz-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yuliianeshta.github.io/quiz-game/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -12,6 +13,7 @@
     "@types/react-dom": "^18.0.8",
     "classnames": "^2.3.2",
     "eslint-config-airbnb": "^19.0.4",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -22,7 +24,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint --fix --ext .ts,.tsx ."
+    "lint": "eslint --fix --ext .ts,.tsx .",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [

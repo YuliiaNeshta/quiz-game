@@ -13,7 +13,7 @@ Using this commands, you can start a project locally: \
 `npm install` \
 `npm run start`
 
-You can also see the project here: [Who wants to be a millionaire?]()
+You can also see the project here: [Who wants to be a millionaire?](https://yuliianeshta.github.io/quiz-game/)
 
 *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
