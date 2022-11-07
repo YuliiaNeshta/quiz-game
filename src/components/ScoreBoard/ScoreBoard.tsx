@@ -13,14 +13,13 @@ const ScoreBoard: FC<ScoreBoardProps> = ({ data, questionIdx, className }) => {
     // @ts-ignore
     <div className={cn(styles.scores, styles[className])}>
       {data
-        .map(score => {
+        .map((score, idx) => {
           return (
             <ButtonScore
-              className={cn(
-                styles.score,
-                questionIdx === score.id ? 'active' : '',
-                score.id < questionIdx ? 'pastScore' : '',
-              )}
+              className={cn(styles.score, {
+                ['active']: questionIdx === idx,
+                ['pastScore']: idx < questionIdx,
+              })}
               key={score.id}
             >
               ${score.amount}

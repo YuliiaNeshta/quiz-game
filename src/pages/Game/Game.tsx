@@ -28,7 +28,7 @@ const Game: FC = () => {
     if (questionIdx > 0) {
       setScore(money[questionIdx - 1]?.amount);
     }
-  }, [answers, score]);
+  }, [questionIdx, answers]);
 
   useEffect(() => {
     const quantityOfQuestions = quiz.length;
@@ -37,8 +37,6 @@ const Game: FC = () => {
       setStartGame(false);
     }
   }, [questionIdx]);
-
-  const indexCurrentScore = money?.findIndex(step => step.amount === score);
 
   const handleTryAgainButton = () => {
     setStartGame(true);
