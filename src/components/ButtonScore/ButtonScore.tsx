@@ -1,7 +1,9 @@
-import cn from 'classnames';
 import React, { FC } from 'react';
-import styles from './ButtonScore.module.scss';
+import cn from 'classnames';
+
 import { ScoreBackground } from '../Icons';
+
+import styles from './ButtonScore.module.scss';
 import { ButtonScoreProps } from './types';
 
 const ButtonScore: FC<ButtonScoreProps> = ({ children, className, onClick }) => {

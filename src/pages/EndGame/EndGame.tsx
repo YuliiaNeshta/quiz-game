@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
+
 import hand from '../../assests/images/hand.svg';
 import Button from '../../components/Button';
+
 import styles from './EndGame.module.scss';
 import { EndGameProps } from './types';
 

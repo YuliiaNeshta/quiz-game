@@ -1,5 +1,6 @@
-import cn from 'classnames';
 import React, { FC, useEffect, useState } from 'react';
+import cn from 'classnames';
+
 import { Burger, Close } from '../../components/Icons';
 import Question from '../../components/Question';
 import ScoreBoard from '../../components/ScoreBoard';
@@ -14,7 +15,7 @@ const Game: FC = () => {
   const [startGame, setStartGame] = useState<boolean>(true);
   const [questionIdx, setQuestionIdx] = useState<number>(0);
   const [score, setScore] = useState<string>('0');
-  const [className, setClassName] = useState<string>('');
+  const [classNameForActiveAnswer, setClassNameForActiveAnswer] = useState<string>('');
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
 
   const [showScoreMobile, setShowScoreMobile] = useState<boolean>(false);
@@ -24,8 +25,9 @@ const Game: FC = () => {
   useEffect(() => {
     const allAreTrue = (answers: boolean[]): boolean => answers.every(answer => answer);
     setStartGame(allAreTrue(answers));
-
-    setScore(money[questionIdx - 1]?.amount);
+    if (questionIdx > 0) {
+      setScore(money[questionIdx - 1]?.amount);
+    }
   }, [answers, score]);
 
   useEffect(() => {
@@ -42,7 +44,7 @@ const Game: FC = () => {
     setStartGame(true);
     setQuestionIdx(0);
     setAnswers([]);
-    setClassName('');
+    setClassNameForActiveAnswer('');
   };
 
   const handleClick = (answer: string, correctAnswer: string) => {
@@ -52,7 +54,7 @@ const Game: FC = () => {
       setAnswers(prev => [...prev, answer === correctAnswer]);
     }, DELAY);
 
-    setClassName(answer === correctAnswer ? 'success' : 'error');
+    setClassNameForActiveAnswer(answer === correctAnswer ? 'success' : 'error');
     if (answer === correctAnswer) {
       //Timeout for buttons to show styles
       setTimeout(() => {
@@ -68,7 +70,7 @@ const Game: FC = () => {
           <Question
             data={quiz}
             onClick={handleClick}
-            className={className}
+            className={classNameForActiveAnswer}
             questionIdx={questionIdx}
             selectedAnswer={selectedAnswer}
           />
@@ -77,12 +79,7 @@ const Game: FC = () => {
           ) : (
             <Burger className={styles.burger} onClick={() => setShowScoreMobile(true)} />
           )}
-          <ScoreBoard
-            className={cn(showScoreMobile ? 'show' : 'hide')}
-            data={money}
-            questionIdx={questionIdx}
-            indexCurrentScore={indexCurrentScore}
-          />
+          <ScoreBoard className={cn(showScoreMobile ? 'show' : 'hide')} data={money} questionIdx={questionIdx} />
         </div>
       ) : (
         <EndGame score={score} onClick={() => handleTryAgainButton()} />

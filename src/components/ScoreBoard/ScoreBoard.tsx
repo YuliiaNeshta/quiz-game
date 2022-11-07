@@ -1,13 +1,12 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
 
-import Button from '../Button';
 import ButtonScore from '../ButtonScore';
 
 import styles from './ScoreBoard.module.scss';
 import { ScoreBoardProps } from './types';
 
-const ScoreBoard: FC<ScoreBoardProps> = ({ data, questionIdx, indexCurrentScore, className }) => {
+const ScoreBoard: FC<ScoreBoardProps> = ({ data, questionIdx, className }) => {
   if (!data) return null;
 
   return (
@@ -20,7 +19,7 @@ const ScoreBoard: FC<ScoreBoardProps> = ({ data, questionIdx, indexCurrentScore,
               className={cn(
                 styles.score,
                 questionIdx === score.id ? 'active' : '',
-                score.id > 0 && score.id <= indexCurrentScore ? 'pastScore' : '',
+                score.id < questionIdx ? 'pastScore' : '',
               )}
               key={score.id}
             >

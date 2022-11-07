@@ -7,5 +7,4 @@ export interface ScoreBoardProps {
   data: Data[];
   questionIdx: number;
   className?: string | undefined;
-  indexCurrentScore: number;
 }

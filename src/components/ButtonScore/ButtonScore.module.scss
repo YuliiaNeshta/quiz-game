@@ -25,6 +25,7 @@
     z-index: 0;
     margin: 0;
     background-color: #d0d0d8;
+    transition: background-color 0.2s ease;
   }
   &::after{
     left: auto;
@@ -59,6 +60,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: color 0.2s ease;
   @media screen and (max-width: $tablet){
     font-size: 0.875rem;
   }
