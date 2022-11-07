@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import cn from 'classnames';
 
 import Button from '../Button';
+import ButtonScore from '../ButtonScore';
 
 import styles from './ScoreBoard.module.scss';
 import { ScoreBoardProps } from './types';
@@ -15,18 +16,16 @@ const ScoreBoard: FC<ScoreBoardProps> = ({ data, questionIdx, indexCurrentScore,
       {data
         .map(score => {
           return (
-            <Button
-              type="ghost"
-              size="small"
+            <ButtonScore
               className={cn(
                 styles.score,
-                questionIdx === score.id ? styles.active : '',
-                score.id > 0 && score.id <= indexCurrentScore ? styles.pastScore : '',
+                questionIdx === score.id ? 'active' : '',
+                score.id > 0 && score.id <= indexCurrentScore ? 'pastScore' : '',
               )}
               key={score.id}
             >
-              {score.amount}
-            </Button>
+              ${score.amount}
+            </ButtonScore>
           );
         })
         .reverse()}

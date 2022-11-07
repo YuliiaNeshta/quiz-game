@@ -23,12 +23,13 @@
 }
 
 .answers {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+  max-width: 810px;
   @media screen and (max-width: $tablet) {
-    grid-template-columns: 1fr;
-    gap: 0.625rem;
+    row-gap: 0.625rem;
+    justify-content: center;
   }
   @media screen and (max-width: $mobile) {
     gap: 0.5rem;
@@ -41,6 +42,9 @@
   line-height: 116%;
   color: $accent02;
   margin-right: 0.5rem;
+  @media screen and (max-width: $tablet){
+    font-size: 0.875rem;
+  }
 }
 
 .questions {

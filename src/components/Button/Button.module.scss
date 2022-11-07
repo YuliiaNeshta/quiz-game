@@ -15,14 +15,6 @@
   font-size: 1.25rem;
   line-height: 116%;
   border: none;
-  &.small{
-    height: 2.5rem;
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 116%;
-    color: $fill;
-    padding-inline: 1.5rem;
-  }
   &.fill{
     color: #FFFFFF;
     background-color: $accent02;
@@ -39,11 +31,6 @@
     border: 1px solid $fill;
     color: $text-color;
   }
-}
-
-.active{
-  background-color: $accent02;
-  color: $accent02;
 }
 
 

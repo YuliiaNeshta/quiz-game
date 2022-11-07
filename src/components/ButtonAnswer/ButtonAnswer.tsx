@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
+import { AnswerBackgroundLarge } from '../Icons';
 
 import styles from './ButtonAnswer.module.scss';
 import { ButtonAnswerProps } from './types';
@@ -11,7 +12,8 @@ const ButtonAnswer: FC<ButtonAnswerProps> = ({ children, onClick, className }) =
       // @ts-ignore
       onClick={onClick}
     >
-      {children}
+      <AnswerBackgroundLarge className={styles.svg} />
+      <span className={styles.text}>{children}</span>
     </button>
   );
 };

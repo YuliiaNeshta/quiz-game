@@ -50,9 +50,9 @@
     },
     {
       "id": 9,
-      "question": "What does NASA stand for?",
-      "answers": ["National Aeronautics and Space Administration", "Nautical And Space Association", "National Aeronautics and Space Association", "New Aeronautics and Spacial Administration"],
-      "correct_answer": "National Aeronautics and Space Administration"
+      "question": "In the Big Bang Theory, what is the name of Sheldon and Leonard’s neighbour?",
+      "answers": ["Penny", "Patty", "Lily", "Jessie"],
+      "correct_answer": "Penny"
     },
     {
       "id": 10,
