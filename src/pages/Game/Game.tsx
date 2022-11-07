@@ -47,12 +47,14 @@ const Game: FC = () => {
 
   const handleClick = (answer: string, correctAnswer: string) => {
     setSelectedAnswer(answer);
-    //Timeout it takes for buttons to show styles
+
+    //Timeout for buttons to show styles
     setTimeout(() => {
       setAnswers(prev => [...prev, answer === correctAnswer]);
     }, DELAY);
 
     setClassNameForActiveAnswer(answer === correctAnswer ? 'success' : 'error');
+
     if (answer === correctAnswer) {
       //Timeout for buttons to show styles
       setTimeout(() => {

@@ -13,9 +13,7 @@ const EndGame: FC<EndGameProps> = ({ score, onClick }) => {
       <div className={styles.result}>
         <p className={styles.totalText}>Total score:</p>
         <p className={styles.score}>${score} earned</p>
-        <Button type="fill" onClick={onClick}>
-          Try again
-        </Button>
+        <Button onClick={onClick}>Try again</Button>
       </div>
     </div>
   );

@@ -13,9 +13,7 @@ const Main: FC<MainProps> = ({ onClick }) => {
       </div>
       <div className={styles.content}>
         <h1 className={styles.title}>Who wants to be a&nbsp;millionaire?</h1>
-        <Button type="fill" onClick={onClick}>
-          Start
-        </Button>
+        <Button onClick={onClick}>Start</Button>
       </div>
     </div>
   );

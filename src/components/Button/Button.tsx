@@ -3,19 +3,9 @@ import { ButtonProps } from './types';
 import styles from './Button.module.scss';
 import cn from 'classnames';
 
-const Button: FC<ButtonProps> = ({ children, size = 'normal', type = 'fill', className, disabled, onClick }) => {
+const Button: FC<ButtonProps> = ({ children, className, onClick }) => {
   return (
-    <button
-      className={cn(
-        styles.button,
-        size === 'small' ? styles.small : '',
-        type === 'fill' ? styles.fill : '',
-        type === 'ghost' ? styles.ghost : '',
-        className,
-      )}
-      disabled={disabled}
-      onClick={onClick}
-    >
+    <button className={cn(styles.button, className)} onClick={onClick}>
       {children}
     </button>
   );
